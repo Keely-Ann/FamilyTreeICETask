@@ -2,8 +2,24 @@
 
 <link rel="stylesheet" href="~/css/style.css" />
 
-
 <div class="family-tree-container">
-    <h2 class="text-center mt-4 mb-4">Royal Family Tree</h2>
-    @Html.Partial("FamilyTree", Model)
+
+    <div class="search-container">
+        <form asp-controller="Home" asp-action="Search" method="get">
+            <input type="text" name="name" placeholder="Search for a royal family member..."
+            value="@(ViewBag.SearchInput ??"")">
+            <button type="submit">Search</button>
+        </form>
+
+        @if (ViewBag.HighlightNode != null)
+        {
+            var member = ViewBag.HighlightNode.Data;
+            <div class="message-container">
+                <p><b>@member.Name</b> is @(member.isAlive ? "currently alive" : "deceased") and holds the <b>@ViewBag.Position</b> position in line to the throne.</p>
+            </div>
+            
+        }
+    </div>
+
+    @Html.Partial("FamilyTree", Model) 
 </div>
