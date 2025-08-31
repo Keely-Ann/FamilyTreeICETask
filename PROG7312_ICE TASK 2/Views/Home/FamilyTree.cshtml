@@ -1,0 +1,25 @@
+﻿@model PROG7312_ICE_TASK_2.Models.FamilyTreeNode<PROG7312_ICE_TASK_2.Models.FamilyMember>
+
+<link rel="stylesheet" href="~/css/style.css" />
+
+<div class="tree-node">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title"><b>@Model.Data.Name</b></h4>
+            <p class="card-text">
+                @Model.Data.DateOfBirth.ToString("dd MMM yyyy") <br />
+                @(Model.Data.isAlive ? "Alive" : "Deceased")
+            </p>
+        </div>
+    </div>
+
+    @if (Model.Children != null && Model.Children.Any())
+    {
+        <div class="children-container @(Model.Children.Count() > 1 ? "horizontal-children" : "")">
+            @foreach (var child in Model.Children)
+            {
+                @Html.Partial("FamilyTree", child)
+            }
+        </div>
+    }
+</div>
