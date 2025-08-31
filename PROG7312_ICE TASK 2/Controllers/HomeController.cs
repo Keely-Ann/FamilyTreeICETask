@@ -143,4 +143,3 @@ namespace PROG7312_ICE_TASK_2.Controllers
 }
 
 // Royal Information Reference: https://metro.co.uk/2024/11/14/full-list-royal-familys-birthday-dates-king-charles-turns-76-21986352/#:~:text=The%20King%20and%20Queen%20are%20in%20their%2070s%2C,17%2C%201947%20and%20is%20currently%2077%20years%20old.
-// Ordinal Reference: https://stackoverflow.com/questions/20156/is-there-an-easy-way-to-create-ordinals-in-c
