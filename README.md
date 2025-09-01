@@ -6,6 +6,13 @@
 ## Implemented 
 - Displaying full family tree
 - Search Feature
+- Breadth-First Search (BFS) 
+- Depth-First Search (DFS) 
+
+<br>
+
+## Implemented 
+- Did not implement the Add Family Member Bonus Marks Section
 
 <br>
 
