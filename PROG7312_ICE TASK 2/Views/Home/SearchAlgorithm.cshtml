@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "SearchAlgorithm";
+}
+
+<br /><br />
+
+
+<h2>Breadth-First Search (BFS)</h2>
+<ul>
+    @foreach (var item in Model.BFSResults)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+<br />
+
+<h2>Depth-First Search (DFS)</h2>
+<ul>
+    @foreach (var item in Model.DFSResults)
+    {
+        <li>@item</li>
+    }
+</ul>

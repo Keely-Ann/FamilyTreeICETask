@@ -19,6 +19,19 @@ namespace PROG7312_ICE_TASK_2.Controllers
             return View(_familyTreeNode);
         }
 
+        // Displaying the BFS and DFS search alorithms
+        public IActionResult SearchAlgorithm()
+        {
+            var tree = new Tree<FamilyMember> { Root = _familyTreeNode };
+
+            var searchView = new FamilySearchAlgorithm
+            {
+                BFSResults = tree.BreadthFirstSearch().Select(x => x.Name).ToList(),
+                DFSResults = tree.DepthFirstSearch().Select(x => x.Name).ToList()
+            };
+            return View(searchView);
+        }
+
         // Displaying the tree structure and the search bar
         public IActionResult FamilyTreeDisplay()
         {
