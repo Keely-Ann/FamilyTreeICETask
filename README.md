@@ -6,7 +6,6 @@
 ## Implemented 
 - Displaying full family tree
 - Search Feature
-- Included BFS and DFS
 
 <br>
 
