@@ -11,8 +11,8 @@
 
 <br>
 
-## Implemented 
-- Did not implement the Add Family Member Bonus Marks Section
+## Not Implemented 
+- Add Family Member (Bonus Marks Section)
 
 <br>
 
